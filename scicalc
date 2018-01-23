@@ -37,7 +37,7 @@ def add(*args):
 
 # Take an number input and return the tangent value for that number
 def tan(x):
-	"""Return the tangent values of x"""
+	"""Return the tangent values of x degrees"""
 
 	return math.tan(x)
 
