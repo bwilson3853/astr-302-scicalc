@@ -50,9 +50,9 @@ def log10(x):
 	return math.log10(x)
 
 def cos(x):
-	"""Return the cosine value of x in radians"""
+	"""Takes x in degrees and returns the cosine value"""
 	
-	return math.cos(x)
+	return math.cos(math.radians(x))
 
 #
 # The dictionary that maps the command-line name of the operation,
