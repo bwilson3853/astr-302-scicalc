@@ -35,6 +35,15 @@ def add(*args):
 		sum += arg
 	return sum
 
+def sub(*args):
+	"""Subtract a list of numbers from an initial number"""
+	"""All numbers after the first number given are subracted"""
+
+	diff = args[0]
+	for arg in args[1:]:
+		diff -= arg
+	return diff
+
 def mul(*args):
 	"""Multiply a list of arguments"""
 
@@ -46,8 +55,9 @@ def mul(*args):
 
 def log10(x):
 	"""Return a base-10 logarithm of x"""
-	
+
 	return math.log10(x)
+
 
 #
 # The dictionary that maps the command-line name of the operation,
@@ -57,6 +67,8 @@ def log10(x):
 operators = {
 	'add': add,
 	'sum': add,
+	'sub': sub,
+	'diff': sub,
 	'mul': mul,
 	'log10': log10,
 }
