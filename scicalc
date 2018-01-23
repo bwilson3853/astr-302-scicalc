@@ -46,8 +46,32 @@ def mul(*args):
 
 def log10(x):
 	"""Return a base-10 logarithm of x"""
-	
+
 	return math.log10(x)
+
+
+def squared(x):
+	"""Returns x squared
+
+	Example:
+	--------
+	./scicalc squared 4 2
+	16
+	"""
+
+	return x**2
+
+def exponent(*args):
+	"""Returns 1st argument to the 2nd argument to the 3rd, etc
+
+	Example:
+	--------
+	./scicalc ^ 2 5
+	10
+	"""
+
+	import functools
+	return functools.reduce(lambda x,y : x*y, args)
 
 #
 # The dictionary that maps the command-line name of the operation,
@@ -59,6 +83,8 @@ operators = {
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
+	'squared' : squared,
+	'^' : exponent,
 }
 
 if __name__ == "__main__":
