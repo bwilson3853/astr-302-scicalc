@@ -49,6 +49,12 @@ def log10(x):
 	
 	return math.log10(x)
 
+def mean(*args):
+	"""Return mean float of list of numbers"""
+		# `sum` is a built-in Python function that sums up all elements in a list
+		# `len` is another built-in Python function that gives the length of a list
+	return sum(args)/len(args)
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -58,6 +64,7 @@ operators = {
 	'add': add,
 	'sum': add,
 	'mul': mul,
+	'mean': mean,
 	'log10': log10,
 }
 
