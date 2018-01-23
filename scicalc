@@ -44,6 +44,15 @@ def mul(*args):
 	import functools
 	return functools.reduce(lambda x, y: x*y, args)
 
+def div(*args):
+        """Divide a list of arguments."""
+
+        quot = args[0]
+        for arg in args[1:]:
+                quot /= arg
+        return quot
+        
+
 def log10(x):
 	"""Return a base-10 logarithm of x"""
 	
@@ -58,6 +67,7 @@ operators = {
 	'add': add,
 	'sum': add,
 	'mul': mul,
+        'div': div,
 	'log10': log10,
 }
 
