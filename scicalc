@@ -49,7 +49,7 @@ def log10(x):
 	
 	return math.log10(x)
 
-def ln(x):
+def LN(x):
 	"""Return a natural logarithm of x"""
 	
 	return math.log(x)
@@ -64,7 +64,7 @@ operators = {
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
-	'ln': ln,
+	'LN': LN,
 }
 
 if __name__ == "__main__":
