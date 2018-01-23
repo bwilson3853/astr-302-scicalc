@@ -35,9 +35,16 @@ def add(*args):
 		sum += arg
 	return sum
 
+# Take an number input and return the tangent value for that number
+def tan(x):
+	"""Return the tangent values of x"""
+
+	return math.tan(x)
+
+
 def log10(x):
 	"""Return a base-10 logarithm of x"""
-	
+
 	return math.log10(x)
 
 #
@@ -49,6 +56,7 @@ operators = {
 	'add': add,
 	'sum': add,
 	'log10': log10,
+	'tan': tan,
 }
 
 if __name__ == "__main__":
