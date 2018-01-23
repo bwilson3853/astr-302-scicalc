@@ -35,6 +35,11 @@ def add(*args):
 		sum += arg
 	return sum
 
+def mul(*args):
+	"""Multiply a list of arguments"""
+	import functools
+	return functools.reduce(lambda x, y: x*y, args)
+
 def log10(x):
 	"""Return a base-10 logarithm of x"""
 	
@@ -48,6 +53,7 @@ def log10(x):
 operators = {
 	'add': add,
 	'sum': add,
+	'mul': mul,
 	'log10': log10,
 }
 
