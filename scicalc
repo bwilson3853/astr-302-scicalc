@@ -5,6 +5,7 @@
 
 import sys, math
 
+
 def die_with_usage(message):
 	print("\n****\n**** error: {}\n****\n".format(message), file=sys.stderr)
 	print("usage:\n\n    {} <operator> [arg1 [arg2 [...]]]\n".format(sys.argv[0]), file=sys.stderr)
@@ -54,12 +55,24 @@ def log10(x):
 # to the function that performs it. There can be multiple names
 # for the same operator (e.g., 'add' and 'sum').
 #
+def inverse(x):
+    """Takes the inverse of x"""
+    inv = 1 / x    
+    return inv
+
 operators = {
 	'add': add,
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
+    'inverse': inverse,
 }
+
+
+
+
+
+
 
 if __name__ == "__main__":
 	#
