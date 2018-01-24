@@ -39,7 +39,7 @@ def add(*args):
 def tan(x):
 	"""Return the tangent values of x degrees"""
 
-	return math.tan(x)
+	return math.tan(math.radians(x))
 
 
 def log10(x):
