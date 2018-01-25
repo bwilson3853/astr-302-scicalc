@@ -41,6 +41,14 @@ def tan(x):
 
 	return math.tan(math.radians(x))
 
+def mul(*args):
+	"""Multiply a list of arguments"""
+
+        # I could've implemented this similarly to 'add', but I
+        # chose to show you some functional programming instead!
+        # Read more at https://www.python-course.eu/lambda.php
+	import functools
+	return functools.reduce(lambda x, y: x*y, args)
 
 def log10(x):
 	"""Return a base-10 logarithm of x"""
