@@ -47,8 +47,8 @@ def mul(*args):
 def div(*args):
         """Divide a list of arguments."""
 
-        quot = args[0]
-        for arg in args[1:]:
+        quot = args[0] #First input is dividend
+        for arg in args[1:]: #Each successive input is divisor rather than throwing IndexError exception
                 quot /= arg
         return quot
         
