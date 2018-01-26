@@ -48,6 +48,11 @@ def log10(x):
 	"""Return a base-10 logarithm of x"""
 	
 	return math.log10(x)
+def factorial(x):
+	if x == 0:
+		return 1
+	else:
+		return x * factorial(x-1)
 
 #
 # The dictionary that maps the command-line name of the operation,
@@ -59,6 +64,7 @@ operators = {
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
+	'fac': factorial,
 }
 
 if __name__ == "__main__":
