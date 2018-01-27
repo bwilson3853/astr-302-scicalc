@@ -68,7 +68,6 @@ operators = {
 	'mul': mul,
 	'log10': log10,
 	'root': root,
-	'sqrt': root,
 }
 
 if __name__ == "__main__":
