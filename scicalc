@@ -53,10 +53,6 @@ def cos(x):
 	"""Takes x in degrees and returns the cosine value"""
 	
 	return round(math.cos(math.radians(x)),2)
-def LN(x):
-	"""Return a natural logarithm of x"""
-	
-	return math.log(x)
 
 #
 # The dictionary that maps the command-line name of the operation,
@@ -69,7 +65,6 @@ operators = {
 	'mul': mul,
 	'log10': log10,
 	'cos': cos,
-	'LN': LN,
 }
 
 if __name__ == "__main__":
