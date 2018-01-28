@@ -50,8 +50,8 @@ def log10(x):
 	return math.log10(x)
 def factorial(x):
 	if x == 0:
-		return 1
-	else:
+		return 1   # factorial of 0 is 1
+	else:              # otherwise it will calculate the factorial
 		return x * factorial(x-1)
 
 #
