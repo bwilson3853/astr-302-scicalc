@@ -78,10 +78,7 @@ def factorial(x):
 		return x * factorial(x-1)
 
 def root(x = 0, y = 2):
-	"""Return the yth root of x, e.g. x = 4, y = 2 gives 2.0
-	
-	(Default: x = 0, y = 2)
-	"""
+	"""Return the yth root of x (default: x=0, y=2)"""
 	
 	return x**(1/y)
 
