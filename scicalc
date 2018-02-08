@@ -48,6 +48,11 @@ def log10(x):
 	"""Return a base-10 logarithm of x"""
 	
 	return math.log10(x)
+def factorial(x):
+	if x == 0:
+		return 1   # factorial of 0 is 1
+	else:              # otherwise it will calculate the factorial
+		return x * factorial(x-1)
 
 def root(x = 0, y = 2):
 	"""Return the yth root of x, e.g. x = 4, y = 2 gives 2.0
@@ -68,6 +73,7 @@ operators = {
 	'mul': mul,
 	'log10': log10,
 	'root': root,
+	'fac': factorial,
 }
 
 if __name__ == "__main__":
