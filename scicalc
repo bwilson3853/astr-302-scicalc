@@ -82,6 +82,11 @@ def sin(x):
 		# Converts x to radians and then takes sine of x.
 	return math.sin(math.radians(x))
 
+def cos(x):
+	"""Takes x in degrees and returns the cosine value"""
+	
+	return math.cos(math.radians(x))
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -93,8 +98,9 @@ operators = {
 	'add': add,
 	'sum': add,
 	'mul': mul,
-        'div': div,
+  'div': div,
 	'log10': log10,
+	'cos': cos,
 	'sin': sin,
 	'sine': sin,
   'inverse': inverse,
