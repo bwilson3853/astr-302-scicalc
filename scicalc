@@ -46,7 +46,7 @@ def mul(*args):
 
 def log10(x):
 	"""Return a base-10 logarithm of x"""
-	
+
 	return math.log10(x)
 def factorial(x):
 	if x == 0:
@@ -67,6 +67,12 @@ def inverse(x):
     inv = 1 / x    
     return inv
 
+def sin(x):
+	"""Return sine of x (x must be in degrees)"""
+
+		# Converts x to radians and then takes sine of x.
+	return math.sin(math.radians(x))
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -79,6 +85,8 @@ operators = {
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
+	'sin': sin
+	'sine': sin
   'inverse': inverse,
 	'root': root,
 	'fac': factorial,
