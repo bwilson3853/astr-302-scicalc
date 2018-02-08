@@ -35,6 +35,15 @@ def add(*args):
 		sum += arg
 	return sum
 
+def sub(*args):
+	"""Subtract a list of numbers from an initial number"""
+	"""All numbers after the first number given are subracted"""
+
+	diff = args[0]
+	for arg in args[1:]:
+		diff -= arg
+	return diff
+
 # Take an number input and return the tangent value for that number
 def tan(x):
 	"""Return the tangent values of x degrees"""
@@ -103,7 +112,6 @@ def ln(x):
 	
 	return math.log(x)
 
-
 def square(x):
 	"""Squares x"""
 
@@ -131,6 +139,8 @@ def tothe(*args):
 operators = {
 	'add': add,
 	'sum': add,
+	'sub': sub,
+	'diff': sub,
 	'mul': mul,
 	'mean': mean,
   'div': div,
