@@ -44,28 +44,72 @@ def mul(*args):
 	import functools
 	return functools.reduce(lambda x, y: x*y, args)
 
+def div(*args):
+        """Divide a list of arguments."""
+
+        quot = args[0] #First input is dividend
+        for arg in args[1:]: #Each successive input is divisor rather than throwing IndexError exception
+                quot /= arg
+        return quot
+        
+
 def log10(x):
 	"""Return a base-10 logarithm of x"""
-	
+
 	return math.log10(x)
+def factorial(x):
+	if x == 0:
+		return 1   # factorial of 0 is 1
+	else:              # otherwise it will calculate the factorial
+		return x * factorial(x-1)
+
+def root(x = 0, y = 2):
+	"""Return the yth root of x, e.g. x = 4, y = 2 gives 2.0
+	
+	(Default: x = 0, y = 2)
+	"""
+	
+	return x**(1/y)
+
+def inverse(x):
+    """Takes the inverse of any x other than zero"""
+    inv = 1 / x    
+    return inv
+
+def sin(x):
+	"""Return sine of x (x must be in degrees)"""
+
+		# Converts x to radians and then takes sine of x.
+	return math.sin(math.radians(x))
 
 def cos(x):
 	"""Takes x in degrees and returns the cosine value"""
 	
-	return round(math.cos(math.radians(x)),2)
+	return math.cos(math.radians(x))
 
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
 # for the same operator (e.g., 'add' and 'sum').
 #
+
+
 operators = {
 	'add': add,
 	'sum': add,
 	'mul': mul,
+  'div': div,
 	'log10': log10,
 	'cos': cos,
+	'sin': sin,
+	'sine': sin,
+  'inverse': inverse,
+	'root': root,
+	'fac': factorial,
 }
+
+
+
 
 if __name__ == "__main__":
 	#
