@@ -85,8 +85,8 @@ operators = {
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
-	'sin': sin
-	'sine': sin
+	'sin': sin,
+	'sine': sin,
   'inverse': inverse,
 	'root': root,
 	'fac': factorial,
