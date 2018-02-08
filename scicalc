@@ -5,7 +5,6 @@
 
 import sys, math
 
-
 def die_with_usage(message):
 	print("\n****\n**** error: {}\n****\n".format(message), file=sys.stderr)
 	print("usage:\n\n    {} <operator> [arg1 [arg2 [...]]]\n".format(sys.argv[0]), file=sys.stderr)
@@ -49,6 +48,19 @@ def log10(x):
 	"""Return a base-10 logarithm of x"""
 	
 	return math.log10(x)
+def factorial(x):
+	if x == 0:
+		return 1   # factorial of 0 is 1
+	else:              # otherwise it will calculate the factorial
+		return x * factorial(x-1)
+
+def root(x = 0, y = 2):
+	"""Return the yth root of x, e.g. x = 4, y = 2 gives 2.0
+	
+	(Default: x = 0, y = 2)
+	"""
+	
+	return x**(1/y)
 
 def inverse(x):
     """Takes the inverse of any x other than zero"""
@@ -67,11 +79,10 @@ operators = {
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
-    'inverse': inverse,
+  'inverse': inverse,
+	'root': root,
+	'fac': factorial,
 }
-
-
-
 
 
 
