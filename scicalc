@@ -55,8 +55,8 @@ def div(*args):
 
 def log10(x):
 	"""Return a base-10 logarithm of x"""
-
 	return math.log10(x)
+
 def factorial(x):
 	if x == 0:
 		return 1   # factorial of 0 is 1
@@ -98,6 +98,24 @@ def ln(x):
 	
 	return math.log(x)
 
+
+def square(x):
+	"""Squares x"""
+
+	return x**2
+
+def exponent(x):
+	"""Returns e^x"""
+
+	import numpy as np
+	return np.e**x
+
+def tothe(*args):
+	"""Returns 1st argument to the 2nd argument to the 3rd, etc"""
+
+	import functools
+	return functools.reduce(lambda x,y : x*y, args)
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -112,6 +130,11 @@ operators = {
 	'mean': mean,
   'div': div,
 	'log10': log10,
+	'squared' : square,
+	'square' : square,
+	'^2' : square,
+	'^' : tothe,
+	'exp' : exponent,
 	'ln': ln,
 	'cos': cos,
 	'sin': sin,
