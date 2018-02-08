@@ -93,6 +93,11 @@ def mean(*args):
 		# `len` is another built-in Python function that gives the length of a list
 	return sum(args)/len(args)
 
+def ln(x):
+	"""Return a natural logarithm of x"""
+	
+	return math.log(x)
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -107,6 +112,7 @@ operators = {
 	'mean': mean,
   'div': div,
 	'log10': log10,
+	'ln': ln,
 	'cos': cos,
 	'sin': sin,
 	'sine': sin,
