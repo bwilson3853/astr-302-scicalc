@@ -114,7 +114,7 @@ def tothe(*args):
 	"""Returns 1st argument to the 2nd argument to the 3rd, etc"""
 
 	import functools
-	return functools.reduce(lambda x,y : x*y, args)
+	return functools.reduce(lambda x,y : x**y, args)
 
 #
 # The dictionary that maps the command-line name of the operation,
