@@ -54,6 +54,14 @@ def factorial(x):
 	else:              # otherwise it will calculate the factorial
 		return x * factorial(x-1)
 
+def root(x = 0, y = 2):
+	"""Return the yth root of x, e.g. x = 4, y = 2 gives 2.0
+	
+	(Default: x = 0, y = 2)
+	"""
+	
+	return x**(1/y)
+
 #
 # The dictionary that maps the command-line name of the operation,
 # to the function that performs it. There can be multiple names
@@ -64,6 +72,7 @@ operators = {
 	'sum': add,
 	'mul': mul,
 	'log10': log10,
+	'root': root,
 	'fac': factorial,
 }
 
